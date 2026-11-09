@@ -11,7 +11,7 @@ Author: Raja Wardet Wahaj (Wolf)
 
 ## About This Repository
 
-This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning and Python programming.
+This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, and Python programming.
 
 ---
 
@@ -25,7 +25,8 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Coho
 | S04 | To be updated | Pending | — |
 | S05 | To be updated | Pending | — |
 | S06 | Network, Port and Vulnerability Scanning | **Completed** | [View Session](s06-scanning/README.md) |
-| S07 onwards | To be updated | Upcoming | — |
+| S07 | Vulnerability Assessment & Penetration Testing (Nessus + Metasploit) | **Completed** | [View Session](s07-report/README.md) |
+| S08 onwards | To be updated | Upcoming | — |
 
 *Progress will be updated as the training continues.*
 
@@ -57,6 +58,21 @@ Also completed: **B3** (CVSS vector decoded) and **B4** (CWE classification of t
 
 [**View Complete S06 Documentation**](s06-scanning/README.md)
 
+### S07 — Vulnerability Assessment & Penetration Testing Report
+
+Full grey-box VA/PT engagement against Metasploitable 2: manual enumeration, an automated Tenable Nessus scan, a Metasploit exploitation walkthrough to root via the vsftpd backdoor, and post-exploitation enumeration.
+
+| Finding | CVSS | Severity |
+|---|:---:|---|
+| vsftpd 2.3.4 backdoor (CVE-2011-2523) | 9.8 | Critical |
+| Default credentials (msfadmin) | 8.8 | High |
+| Telnet exposed | 5.9 | Medium |
+| phpinfo.php disclosure | 5.3 | Medium |
+
+Nessus flagged 24 findings (7 Critical, 2 High, 3 Medium, 1 Low, 11 Info) and agreed with all 4 manually validated findings.
+
+[**View Complete S07 Documentation**](s07-report/README.md)
+
 ---
 
 ## Repository Structure
@@ -71,6 +87,10 @@ pseb-dfcs-bootcamp/
 ├── s06-scanning/
 │   ├── README.md
 │   ├── DFCS_Day2_HomeWork_Raja_Wardet_Wahaj.pdf
+│   └── figures/
+├── s07-report/
+│   ├── README.md
+│   ├── DFCS_Day3_HomeWork_Raja_Wardet_Wahaj.docx
 │   └── figures/
 └── ...
 ```
@@ -89,7 +109,9 @@ pseb-dfcs-bootcamp/
 |---|---|
 | Operating Systems | Kali Linux, Metasploitable 2 |
 | Network Scanning | Nmap (NSE scripts), tcpdump |
-| Network Utilities | telnet, ftp |
+| Vulnerability Management | Tenable Nessus |
+| Exploitation | Metasploit Framework |
+| Network Utilities | telnet, ftp, ssh |
 | Programming | Python 3 |
 | Virtualization | VMware |
 | Security Research | CVE, CWE, CVSS, NVD |
@@ -99,7 +121,7 @@ pseb-dfcs-bootcamp/
 
 ## Responsible Use & Disclaimer
 
-All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines). Nothing here may be used against systems without explicit permission.
+All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines), under written course authorization. Nothing here may be used against systems without explicit permission.
 
 ---
 
