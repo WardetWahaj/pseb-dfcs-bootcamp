@@ -1,17 +1,17 @@
-# DFCS Bootcamp | Atomcamp
+# DFCS Bootcamp | Atomcamp (PSEB)
 
 ![Program](https://img.shields.io/badge/PROGRAM-DFCS%20BOOTCAMP-1F4B99?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-IN%20PROGRESS-D97706?style=for-the-badge)
 
 **Cybersecurity Training, Practical Labs, Technical Reports & Projects**
 
-Author: Raja Wardet Wahaj
+Author: Raja Wardet Wahaj (Wolf)
 
 ---
 
 ## About This Repository
 
-This repository documents my practical work in the DFCS Bootcamp (Atomcamp). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration and Python programming.
+This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning and Python programming.
 
 ---
 
@@ -22,6 +22,10 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp). It 
 | S01 | Foundations: Malware Research, Linux Permissions, Caesar Cipher | **Completed** | [View Session](s01-foundations/README.md) |
 | S02 | To be updated | Pending | — |
 | S03 | To be updated | Pending | — |
+| S04 | To be updated | Pending | — |
+| S05 | To be updated | Pending | — |
+| S06 | Network, Port and Vulnerability Scanning | **Completed** | [View Session](s06-scanning/README.md) |
+| S07 onwards | To be updated | Upcoming | — |
 
 *Progress will be updated as the training continues.*
 
@@ -39,24 +43,35 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp). It 
 
 [**View Complete S01 Documentation**](s01-foundations/README.md)
 
+### S06 — Network, Port and Vulnerability Scanning
+
+Lab: Kali Linux (attacker) against Metasploitable 2 (target) in an isolated NAT lab.
+
+| Finding | Identifier | CVSS v3.1 | Severity |
+|---|---|:---:|---|
+| vsftpd 2.3.4 backdoor | CVE-2011-2523 / CWE-78 | 9.8 | Critical |
+| Exposed phpinfo.php | CWE-200 | 5.3 | Medium |
+| Telnet service exposed | CWE-319 | 5.9 | Medium |
+
+Also completed: **B3** (CVSS vector decoded) and **B4** (CWE classification of three vulnerabilities).
+
+[**View Complete S06 Documentation**](s06-scanning/README.md)
+
 ---
 
 ## Repository Structure
 
 ```
-dfcs-bootcamp/
+pseb-dfcs-bootcamp/
 ├── README.md
 ├── s01-foundations/
 │   ├── README.md
 │   ├── Scripts/
-│   │   └── caesar_decoder.py
 │   └── evidence/
-│       ├── b2-1-initial.png
-│       ├── b2-2-symbolic-640.png
-│       ├── b2-3-symbolic-644.png
-│       ├── b2-4-octal-600.png
-│       └── b3-caesar-run.png
-├── s02-.../
+├── s06-scanning/
+│   ├── README.md
+│   ├── DFCS_Day2_HomeWork_Raja_Wardet_Wahaj.pdf
+│   └── figures/
 └── ...
 ```
 
@@ -64,7 +79,7 @@ dfcs-bootcamp/
 |---|---|
 | `Scripts/` | Scripts and commands developed during the session |
 | `README.md` | Session overview, method, findings, conclusion |
-| `evidence/` | Screenshots, logs, outputs, reports |
+| `evidence/`, `figures/` | Screenshots, logs, outputs, reports |
 
 ---
 
@@ -72,16 +87,19 @@ dfcs-bootcamp/
 
 | Category | Tools |
 |---|---|
-| Operating Systems | Kali Linux, Linux |
+| Operating Systems | Kali Linux, Metasploitable 2 |
+| Network Scanning | Nmap (NSE scripts), tcpdump |
+| Network Utilities | telnet, ftp |
 | Programming | Python 3 |
-| Virtualization | VirtualBox / VMware |
+| Virtualization | VMware |
+| Security Research | CVE, CWE, CVSS, NVD |
 | Documentation | Markdown, Git, GitHub |
 
 ---
 
 ## Responsible Use & Disclaimer
 
-All exercises are performed for educational purposes in authorized, isolated lab environments. Nothing here may be used against systems without explicit permission.
+All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines). Nothing here may be used against systems without explicit permission.
 
 ---
 
