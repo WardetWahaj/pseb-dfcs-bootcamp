@@ -5,7 +5,7 @@
 
 **Cybersecurity Training, Practical Labs, Technical Reports & Projects**
 
-Author: Raja Wardet Wahaj (Wolf)
+Author: Raja Wardet Wahaj
 
 ---
 
