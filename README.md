@@ -5,13 +5,13 @@
 
 **Cybersecurity Training, Practical Labs, Technical Reports & Projects**
 
-Author: Raja Wardet Wahaj (Wolf)
+Author: Raja Wardet Wahaj
 
 ---
 
 ## About This Repository
 
-This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, and Python programming.
+This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, client-side attacks and privilege escalation, and Python programming.
 
 ---
 
@@ -26,7 +26,8 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Coho
 | S05 | To be updated | Pending | — |
 | S06 | Network, Port and Vulnerability Scanning | **Completed** | [View Session](s06-scanning/README.md) |
 | S07 | Vulnerability Assessment & Penetration Testing (Nessus + Metasploit) | **Completed** | [View Session](s07-report/README.md) |
-| S08 onwards | To be updated | Upcoming | — |
+| S08 | Client-Side Attacks: Payloads, Privilege Escalation, Career Paths | **Completed** | [View Session](s08-client-side/README.md) |
+| S09 onwards | To be updated | Upcoming | — |
 
 *Progress will be updated as the training continues.*
 
@@ -73,6 +74,12 @@ Nessus flagged 24 findings (7 Critical, 2 High, 3 Medium, 1 Low, 11 Info) and ag
 
 [**View Complete S07 Documentation**](s07-report/README.md)
 
+### S08 — Client-Side Attacks: Payloads and Privilege Escalation
+
+Windows 10 lab: `msfvenom`-generated Meterpreter payload, caught with `multi/handler`, escalated from a filtered Administrator token to `NT AUTHORITY\SYSTEM` after UAC blocked the first `getsystem` attempt, via the `bypassuac_fodhelper` module. Also covers a 9-family malware classification table and a career roadmap (SOC L1 → network/AD penetration testing).
+
+[**View Complete S08 Documentation**](s08-client-side/README.md)
+
 ---
 
 ## Repository Structure
@@ -92,6 +99,10 @@ pseb-dfcs-bootcamp/
 │   ├── README.md
 │   ├── DFCS_Day3_HomeWork_Raja_Wardet_Wahaj.docx
 │   └── figures/
+├── s08-client-side/
+│   ├── README.md
+│   ├── DFCS_Day4_HomeWork_Raja_Wardet_Wahaj.docx
+│   └── figures/
 └── ...
 ```
 
@@ -107,21 +118,21 @@ pseb-dfcs-bootcamp/
 
 | Category | Tools |
 |---|---|
-| Operating Systems | Kali Linux, Metasploitable 2 |
+| Operating Systems | Kali Linux, Metasploitable 2, Windows 10 |
 | Network Scanning | Nmap (NSE scripts), tcpdump |
 | Vulnerability Management | Tenable Nessus |
-| Exploitation | Metasploit Framework |
+| Exploitation & Payloads | Metasploit Framework, msfvenom, Meterpreter |
 | Network Utilities | telnet, ftp, ssh |
 | Programming | Python 3 |
 | Virtualization | VMware |
-| Security Research | CVE, CWE, CVSS, NVD |
+| Security Research | CVE, CWE, CVSS, NVD, MITRE ATT&CK |
 | Documentation | Markdown, Git, GitHub |
 
 ---
 
 ## Responsible Use & Disclaimer
 
-All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines), under written course authorization. Nothing here may be used against systems without explicit permission.
+All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines or VMs I own), under written course authorization. Nothing here may be used against systems without explicit permission.
 
 ---
 
