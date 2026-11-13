@@ -5,13 +5,13 @@
 
 **Cybersecurity Training, Practical Labs, Technical Reports & Projects**
 
-Author: Raja Wardet Wahaj
+Author: Raja Wardet Wahaj (Wolf)
 
 ---
 
 ## About This Repository
 
-This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, client-side attacks and privilege escalation, and Python programming.
+This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, client-side attacks and privilege escalation, web reconnaissance and web app pentesting, and Python programming.
 
 ---
 
@@ -27,7 +27,8 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Coho
 | S06 | Network, Port and Vulnerability Scanning | **Completed** | [View Session](s06-scanning/README.md) |
 | S07 | Vulnerability Assessment & Penetration Testing (Nessus + Metasploit) | **Completed** | [View Session](s07-report/README.md) |
 | S08 | Client-Side Attacks: Payloads, Privilege Escalation, Career Paths | **Completed** | [View Session](s08-client-side/README.md) |
-| S09 onwards | To be updated | Upcoming | — |
+| S09 | Recon & Web App Pentesting (Dorking, Subdomains, ZAP vs Burp) | **Completed** | [View Session](s09-recon-and-upload/README.md) |
+| S10 onwards | To be updated | Upcoming | — |
 
 *Progress will be updated as the training continues.*
 
@@ -80,6 +81,12 @@ Windows 10 lab: `msfvenom`-generated Meterpreter payload, caught with `multi/han
 
 [**View Complete S08 Documentation**](s08-client-side/README.md)
 
+### S09 — Recon & Web App Pentesting
+
+A full scope document and rules of engagement for a hypothetical `*.intel.com` test, six Google dorks run against a live domain, three-tool subdomain reconciliation (subfinder/assetfinder/amass) with wildcard-noise cleanup and live-host resolution via `httpx-toolkit`, and a structural + hands-on comparison of OWASP ZAP vs. Burp Suite Community against DVWA.
+
+[**View Complete S09 Documentation**](s09-recon-and-upload/README.md)
+
 ---
 
 ## Repository Structure
@@ -103,6 +110,14 @@ pseb-dfcs-bootcamp/
 │   ├── README.md
 │   ├── DFCS_Day4_HomeWork_Raja_Wardet_Wahaj.docx
 │   └── figures/
+├── s09-recon-and-upload/
+│   ├── README.md
+│   ├── day5-homework.docx
+│   ├── scope/
+│   │   └── intel-scope-and-roe.md
+│   ├── dorks/
+│   ├── subdomains/
+│   └── scanners/
 └── ...
 ```
 
@@ -110,7 +125,7 @@ pseb-dfcs-bootcamp/
 |---|---|
 | `Scripts/` | Scripts and commands developed during the session |
 | `README.md` | Session overview, method, findings, conclusion |
-| `evidence/`, `figures/` | Screenshots, logs, outputs, reports |
+| `evidence/`, `figures/`, `dorks/`, `subdomains/`, `scanners/` | Screenshots, logs, outputs, reports |
 
 ---
 
@@ -122,17 +137,19 @@ pseb-dfcs-bootcamp/
 | Network Scanning | Nmap (NSE scripts), tcpdump |
 | Vulnerability Management | Tenable Nessus |
 | Exploitation & Payloads | Metasploit Framework, msfvenom, Meterpreter |
+| Recon & OSINT | Google dorking, subfinder, assetfinder, amass, httpx-toolkit, crt.sh |
+| Web App Testing | OWASP ZAP, Burp Suite Community, DVWA |
 | Network Utilities | telnet, ftp, ssh |
 | Programming | Python 3 |
 | Virtualization | VMware |
-| Security Research | CVE, CWE, CVSS, NVD, MITRE ATT&CK |
+| Security Research | CVE, CWE, CVSS, NVD, MITRE ATT&CK, OWASP WSTG |
 | Documentation | Markdown, Git, GitHub |
 
 ---
 
 ## Responsible Use & Disclaimer
 
-All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines or VMs I own), under written course authorization. Nothing here may be used against systems without explicit permission.
+All exercises are performed for educational purposes in authorized, isolated lab environments (intentionally vulnerable machines or VMs I own), under written course authorization. Google dorking exercises target only publicly indexed information and exploit nothing. Nothing here may be used against systems without explicit permission.
 
 ---
 
