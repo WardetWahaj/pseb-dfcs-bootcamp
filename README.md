@@ -11,7 +11,7 @@ Author: Raja Wardet Wahaj (Wolf)
 
 ## About This Repository
 
-This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, client-side attacks and privilege escalation, web reconnaissance and web app pentesting, and Python programming.
+This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Cohort 2). It is a structured record of labs, scripts, research and evidence, covering cybersecurity fundamentals, malware research, Linux administration, network scanning, vulnerability assessment/penetration testing, client-side attacks and privilege escalation, web reconnaissance and web app pentesting, file upload exploitation, and Python programming.
 
 ---
 
@@ -28,7 +28,8 @@ This repository documents my practical work in the DFCS Bootcamp (Atomcamp, Coho
 | S07 | Vulnerability Assessment & Penetration Testing (Nessus + Metasploit) | **Completed** | [View Session](s07-report/README.md) |
 | S08 | Client-Side Attacks: Payloads, Privilege Escalation, Career Paths | **Completed** | [View Session](s08-client-side/README.md) |
 | S09 | Recon & Web App Pentesting (Dorking, Subdomains, ZAP vs Burp) | **Completed** | [View Session](s09-recon-and-upload/README.md) |
-| S10 onwards | To be updated | Upcoming | — |
+| S10 | Recon Workflow & File Upload Exploitation | **Completed** | [View Session](s10-upload-exploitation/README.md) |
+| S11 onwards | To be updated | Upcoming | — |
 
 *Progress will be updated as the training continues.*
 
@@ -87,6 +88,12 @@ A full scope document and rules of engagement for a hypothetical `*.intel.com` t
 
 [**View Complete S09 Documentation**](s09-recon-and-upload/README.md)
 
+### S10 — Recon Workflow & File Upload Exploitation
+
+A defensible ten-step reconnaissance workflow (whois → dig → subdomain enumeration → httpx → nmap → whatweb → content discovery → crawling → fuzzing → misconfig scanning), then the DVWA file-upload module exploited across all three security levels on this build. Direct RCE at Low (`uid=33(www-data)`), a client-MIME bypass at Medium via Burp, and a polyglot upload-filter bypass at High (filter defeated; direct execution blocked by Apache's handling of `.jpg`). Written up as CVSS 9.8 / CWE-434 with a plain-language remediation brief for a non-technical manager.
+
+[**View Complete S10 Documentation**](s10-upload-exploitation/README.md)
+
 ---
 
 ## Repository Structure
@@ -114,10 +121,17 @@ pseb-dfcs-bootcamp/
 │   ├── README.md
 │   ├── day5-homework.docx
 │   ├── scope/
-│   │   └── intel-scope-and-roe.md
 │   ├── dorks/
 │   ├── subdomains/
 │   └── scanners/
+├── s10-upload-exploitation/
+│   ├── README.md
+│   ├── day6-homework.docx
+│   ├── workflow/
+│   │   └── my-ten-step-workflow.md
+│   ├── upload/
+│   └── remediation/
+│       └── manager-brief.md
 └── ...
 ```
 
@@ -125,7 +139,7 @@ pseb-dfcs-bootcamp/
 |---|---|
 | `Scripts/` | Scripts and commands developed during the session |
 | `README.md` | Session overview, method, findings, conclusion |
-| `evidence/`, `figures/`, `dorks/`, `subdomains/`, `scanners/` | Screenshots, logs, outputs, reports |
+| `evidence/`, `figures/`, `dorks/`, `subdomains/`, `scanners/`, `upload/` | Screenshots, logs, outputs, reports |
 
 ---
 
@@ -134,11 +148,11 @@ pseb-dfcs-bootcamp/
 | Category | Tools |
 |---|---|
 | Operating Systems | Kali Linux, Metasploitable 2, Windows 10 |
-| Network Scanning | Nmap (NSE scripts), tcpdump |
-| Vulnerability Management | Tenable Nessus |
+| Network Scanning | Nmap (NSE scripts), tcpdump, naabu |
+| Vulnerability Management | Tenable Nessus, nikto, nuclei, sslscan |
 | Exploitation & Payloads | Metasploit Framework, msfvenom, Meterpreter |
-| Recon & OSINT | Google dorking, subfinder, assetfinder, amass, httpx-toolkit, crt.sh |
-| Web App Testing | OWASP ZAP, Burp Suite Community, DVWA |
+| Recon & OSINT | Google dorking, whois, dig, subfinder, assetfinder, amass, httpx-toolkit, crt.sh, whatweb, katana, ffuf |
+| Web App Testing | OWASP ZAP, Burp Suite Community, DVWA, gobuster |
 | Network Utilities | telnet, ftp, ssh |
 | Programming | Python 3 |
 | Virtualization | VMware |
